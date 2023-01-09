@@ -1,0 +1,57 @@
+
+
+div {
+    font-family: "Cairo", sans-serif !important ;
+}
+
+body {
+    background-color: white !important;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 21.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+@media (max-width: 418px) {
+    .display-2 {
+        font-size: 23px !important;
+    }
+    .mob {
+        font-size: 15px !important;
+    }
+}
+@media (max-width: 281px) {
+    .display-2 {
+        font-size: 20px !important;
+        margin-bottom: 6px !important;
+    }
+    .display-4 {
+        font-size: 20px !important;
+        margin-bottom: 0 !important;
+    }
+    .mob {
+        font-size: 10px !important;
+    }
+    .btn {
+        font-size: 0.5rem !important;
+    }
+}
+.divBack {
+    background-image: url("../../../assets/img/new/Frame.svg");
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width: 576px) {
+    .mob{
+        width: 50% !important;
+        
+    }
+    .smaller {
+        font-size: inherit !important;
+    }
+}

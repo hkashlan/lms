@@ -1,0 +1,73 @@
+<section class="register">
+
+    <div class="center">
+        <h1>Manazel Al-Abrar</h1>
+        <form action="" class="form-group" [formGroup]="registerform">
+            <label for="">First name</label>
+            <input type="text" name="" id="" placeholder="First Name" formControlName="first_name" class="form-control"
+                [class.is-invalid]="firstname?.invalid && firstname?.touched">
+            <div *ngIf="firstname?.invalid && firstname?.touched">
+
+                <small class="text-danger ms-1" *ngIf="firstname?.errors?.['required']">First Name is required!</small>
+            </div>
+
+            <label for="">Last name</label>
+            <input type="text" name="" id="" placeholder="Last Name" class="form-control" formControlName="last_name"
+                [class.is-invalid]="lastname?.invalid && lastname?.touched">
+            <div *ngIf="lastname?.invalid && lastname?.touched">
+
+                <small class="text-danger ms-1" *ngIf="lastname?.errors?.['required']">Last Name is required!</small>
+            </div>
+
+            <label for="">E-Mail</label>
+            <input type="email" name="" id="" placeholder="Your E-Mail" class="form-control" formControlName="email"
+                [class.is-invalid]="email?.invalid && email?.touched">
+            <div *ngIf="email?.invalid && email?.touched">
+
+                <small class="text-danger ms-1" *ngIf="email?.errors?.['required']">Email is required!</small>
+                <small class="text-danger ms-1" *ngIf="email?.errors?.['email']">Wrong Format!</small>
+
+            </div>
+            <label for="">Password</label>
+            <input type="password" name="" id="" placeholder="Enter Password" class="form-control"
+                formControlName="password" [class.is-invalid]="password?.invalid && password?.touched">
+            <div *ngIf="password?.invalid && password?.touched">
+
+                <small class="text-danger ms-1" *ngIf="password?.errors?.['required']">Password is required!</small>
+                <small class="text-danger ms-1" *ngIf="password?.errors?.['minlength']">Password should be at least 6 characters.</small>
+
+            </div>
+            <label for="">Confirm Password</label>
+            <input type="password" name="" id="" placeholder="Confirm Password" class="form-control"
+                formControlName="password_confirmation"
+                [class.is-invalid]="confirmPassword?.invalid && confirmPassword?.touched">
+            <div *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
+
+                <small class="text-danger ms-1"
+                    *ngIf="registerform.get('password_confirmation')?.touched && registerform.get('password_confirmation')?.errors?.['passwordMismatch']">
+                    Password does not match
+                </small>
+
+            </div>
+            <button class="btn  m-3" style="background-color:#f3c932; color: white;" [disabled]="loading" (click)="onSubmit()"><i *ngIf="loading"
+                class="fas fa-spinner fa-spin"></i>&nbsp;&nbsp;Register</button> <small>Already a
+                member? <a routerLink="/login" style="color:#f3c932; font-size: 20px; font-weight: 700;">
+                    Login</a></small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+</section>

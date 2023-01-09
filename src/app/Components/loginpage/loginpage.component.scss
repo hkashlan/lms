@@ -1,0 +1,33 @@
+.section-intro{
+    background-image: url('../../../assets/img/section.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.second-section{
+    background-image: url('../../../assets/img/quran.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.box{
+    box-shadow: 0px 1px 13px 0px black;
+}
+.big::marker{
+    font-size: 25px !important;
+    color: #004258 !important;
+    
+}
+.small::marker{
+    color: #deb626;
+    font-size: 20px;
+    
+}
+ul .small{
+    list-style: disc !important;
+   
+}
+.row{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
